@@ -1,0 +1,25 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Deny",
+        "Action": [
+          "cloudwatch:DeleteAlarms",
+          "cloudwatch:DeleteDashboards",
+          "cloudwatch:DisableAlarmActions",
+          "cloudwatch:PutDashboard",
+          "cloudwatch:PutMetricAlarm",
+          "cloudwatch:SetAlarmState"
+        ],
+        "Resource":[
+            "arn:aws:cloudwatch::${Account}:dashboard/[DASHBOARD_NAME]",
+            "arn:aws:cloudwatch:${Region}:${Account}:alarm:[ALARM_NAME]"
+        ],
+        "Condition":{
+            "ArnNotLike":{
+               "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+            }
+         }
+      }
+    ]
+  }

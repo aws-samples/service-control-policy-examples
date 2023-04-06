@@ -1,0 +1,33 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "iam:AttachRolePolicy",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:DeleteRolePermissionsBoundary",
+                "iam:DeleteRolePolicy",
+                "iam:DetachRolePolicy",
+                "iam:PutRolePermissionsBoundary",
+                "iam:PutRolePolicy",
+                "iam:UpdateRole",
+                "iam:UpdateAssumeRolePolicy",
+                "iam:UpdateRoleDescription",
+                "sts:AssumeRole",
+                "iam:TagRole",
+                "iam:UntagRole"
+                ],
+            "Resource": [
+                "arn:aws:iam::*:role/[PROTECTED_ROLE_PREFIX]*",
+                "arn:aws:iam::*:role/[PROTECTED_ROLE_NAME]"
+                ],
+            "Condition": {
+                "ArnNotLike": {
+                    "aws:PrincipalARN": "arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+                }
+                }
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Deny",
+        "Action": [
+          "aws-marketplace:Subscribe",
+          "aws-marketplace:Unsubscribe",
+          "aws-marketplace:CreatePrivateMarketplace",
+          "aws-marketplace:CreatePrivateMarketplaceRequests",
+          "aws-marketplace:AssociateProductsWithPrivateMarketplace",
+          "aws-marketplace:DisassociateProductsFromPrivateMarketplace",
+          "aws-marketplace:UpdatePrivateMarketplaceSettings"
+
+        ],
+        "Resource": "*",
+        "Condition": {
+          "ArnNotLike": {
+            "aws:PrincipalArn":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+          }
+        }
+      }
+    ]
+  }

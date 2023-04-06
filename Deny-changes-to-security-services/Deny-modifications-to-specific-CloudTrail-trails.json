@@ -1,0 +1,21 @@
+{
+    "Version":"2012-10-17",
+    "Statement":[
+       {
+          "Effect":"Deny",
+          "Action":[
+             "cloudtrail:DeleteTrail",
+             "cloudtrail:PutEventSelectors",
+             "cloudtrail:StopLogging",
+             "cloudtrail:UpdateTrail",
+             "cloudtrail:CreateTrail"
+          ],
+          "Resource":"arn:aws:cloudtrail:${Region}:${Account}:trail/[CLOUDTRAIL_NAME]",
+          "Condition":{
+             "ArnNotLike":{
+                "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+             }
+          }
+       }
+    ]
+ }

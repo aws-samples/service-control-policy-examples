@@ -1,0 +1,13 @@
+{
+    "Version":"2012-10-17",
+    "Statement":[
+       {
+          "Effect":"Deny",
+          "Action":[
+             "glacier:DeleteArchive",
+             "glacier:DeleteVault"
+          ],
+          "Resource":"*"
+       }
+    ]
+ }
