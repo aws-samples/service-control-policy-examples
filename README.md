@@ -18,17 +18,17 @@ The example policies are divided into different categories based on the type of 
 
 **Note** : The SCP examples in this repository use a [deny list strategy](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_strategies.html#orgs_policies_denylist), which means that you also need a [FullAWSAccess](https://console.aws.amazon.com/organizations/?#/policies/p-FullAWSAccess) policy or other policy that allows access attached to your AWS Organizations organization entities to allow actions. You still also need to grant appropriate permissions to your principals by using identity-based or resource-based policies.
 
-* **Data perimeter guardrails** : Enforce preventive guardrails that help ensure only your trusted identities are accessing trusted resources from expected networks.
+* **[Data perimeter guardrails](https://github.com/aws-samples/data-perimeter-policy-examples)** : Enforce preventive guardrails that help ensure only your trusted identities are accessing trusted resources from expected networks.
 
-* **Deny changes to security services**: AWS offers security services that help you monitor access, security posture, and activity within your organization. Enforce guardrails to restrict member accounts from disabling these tools that are used to govern and comply, in operational auditing, and risk auditing of your AWS accounts. 
+* **[Deny changes to security services](Deny-changes-to-security-services/Deny-changes-to-security-services.md)**: AWS offers security services that help you monitor access, security posture, and activity within your organization. Enforce guardrails to restrict member accounts from disabling these tools that are used to govern and comply, in operational auditing, and risk auditing of your AWS accounts. 
 
-* **Privileged access controls**: Enforce controls to make sure that your roles and applications are given only privileges which are essential to perform their intended function.
+* **[Privileged access controls](Privileged-access-controls/Privileged-access-controls.md)**: Enforce controls to make sure that your roles and applications are given only privileges which are essential to perform their intended function.
 
-* **Protect cloud platform resource** : Enforce controls to protect your resources in cloud from being modified or deleted. 
+* **[Protect cloud platform resource](Protect-cloud-platform-resource/Protect-cloud-platform-resource.md)** : Enforce controls to protect your resources in cloud from being modified or deleted. 
 
-* **Region Controls**: Enforce controls in your multi-account environment to inhibit use of certain AWS Region or Regions.
+* **[Region Controls](Region-controls/Region-controls.md)**: Enforce controls in your multi-account environment to inhibit use of certain AWS Region or Regions.
   
-* **Sensitive data protection**: Implement controls that protect your sensitive data, that should not be made publicly accessible or deleted intentionally or unintentionally.
+* **[Sensitive data protection](Sensitive-data-protection/Sensitive-data-protection.md)**: Implement controls that protect your sensitive data, that should not be made publicly accessible or deleted intentionally or unintentionally.
 
 
 
@@ -43,7 +43,7 @@ If you are just starting to implement SCPs in your environment, consider top 5 r
 * [Deny member accounts from leaving the organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples_general.html#example-scp-leave-org) 
 * [Only allow usage of approved AWS Regions](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples_general.html#example-scp-deny-region) 
 * [Deny usage of the root user](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples_general.html#example-scp-root-user)
-* [Deny changes to security services](Deny-changes-to-security-services/Deny-disabling-or-modifications-of-security-services.md)
+* [Deny changes to security services](Deny-changes-to-security-services/Deny-changes-to-security-services.md)
 * [Protect your sensitive Amazon S3 buckets](Sensitive-data-protection/Deny-users-from-deleting-Amazon-S3-Buckets-or-objects.json)
 
 ## Documentation links

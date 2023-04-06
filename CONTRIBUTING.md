@@ -39,9 +39,7 @@ For contributions that will take a significant amount of time, [open a new issue
 
 ## Finding contributions to work on
 
-If you'd like to contribute, but don't have a project in mind, look at the [open issues](https://github.com/awsdocs/${GITHUB_REPO}/issues) in this repository for some ideas. Any issues with the [help wanted](https://github.com/awsdocs/${GITHUB_REPO}/labels/help%20wanted) or [enhancement](https://github.com/awsdocs/${GITHUB_REPO}/labels/enhancement) labels are a great place to start.
-
-In addition to written content, we really appreciate new examples and code samples for our documentation, such as examples for different platforms or environments, and code samples in additional languages.
+Looking at the existing issues is a great way to find something to contribute on. As our projects, by default, use the default GitHub issue labels (enhancement/bug/duplicate/help wanted/invalid/question/wontfix), looking at any 'help wanted' issues is a great place to start.
 
 ## Code of conduct
 
