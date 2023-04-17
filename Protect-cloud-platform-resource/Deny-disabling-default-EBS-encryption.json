@@ -1,18 +1,17 @@
 {
-    "Version":"2012-10-17",
-    "Statement":[
-       {
-          "Effect":"Deny",
-          "Action":[
-             "ec2:DisableEbsEncryptionByDefault"
-          ],
-          "Resource":"*",
-          "Condition":{
-             "ArnNotLike":{
-                "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
-             }
-          }
-       }
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "ec2:DisableEbsEncryptionByDefault"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "ArnNotLike": {
+                    "aws:PrincipalARN": "arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+                }
+            }
+        }
     ]
- }
- 
+}

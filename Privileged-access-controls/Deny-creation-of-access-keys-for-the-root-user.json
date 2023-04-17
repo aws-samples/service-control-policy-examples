@@ -4,7 +4,7 @@
         {
             "Effect": "Deny",
             "Action": "iam:CreateAccessKey",
-            "Resource": "arn:aws:iam::*:root"    
-            }
-        ]
-    }
+            "Resource": "arn:aws:iam::*:root"
+        }
+    ]
+}

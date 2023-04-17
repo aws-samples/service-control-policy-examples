@@ -1,23 +1,22 @@
 {
-    "Version":"2012-10-17",
-    "Statement":[
-       {
-          "Effect":"Deny",
-          "Action":[
-             "backup:DeleteBackupPlan",
-             "backup:DeleteBackupSelection",
-             "backup:DeleteBackupVault",
-             "backup:DeleteBackupVaultAccessPolicy",
-             "backup:DeleteBackupVaultNotifications",
-             "backup:DeleteRecoveryPoint",
-             "backup:PutBackupVaultAccessPolicy",
-             "backup:PutBackupVaultNotifications",
-             "backup:UpdateBackupPlan",
-             "backup:UpdateRecoveryPointLifecycle",
-             "backup:UpdateRegionSettings"
-          ],
-          "Resource":"*"
-       }
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "backup:DeleteBackupPlan",
+                "backup:DeleteBackupSelection",
+                "backup:DeleteBackupVault",
+                "backup:DeleteBackupVaultAccessPolicy",
+                "backup:DeleteBackupVaultNotifications",
+                "backup:DeleteRecoveryPoint",
+                "backup:PutBackupVaultAccessPolicy",
+                "backup:PutBackupVaultNotifications",
+                "backup:UpdateBackupPlan",
+                "backup:UpdateRecoveryPointLifecycle",
+                "backup:UpdateRegionSettings"
+            ],
+            "Resource": "*"
+        }
     ]
- }
- 
+}

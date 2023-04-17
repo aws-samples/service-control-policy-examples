@@ -1,30 +1,29 @@
 {
-    "Version":"2012-10-17",
-    "Statement":[
-       {
-          "Effect":"Deny",
-          "Action":[
-             "config:DeleteConfigurationAggregator",
-             "config:DeleteConfigurationRecorder",
-             "config:DeleteDeliveryChannel",
-             "config:PutConfigRule",
-             "config:DeleteConfigRule",
-             "config:DeleteOrganizationConfigRule",
-             "config:DeleteRetentionConfiguration",
-             "config:PutConfigurationAggregator",
-             "config:PutConfigurationRecorder",
-             "config:PutDeliveryChannel",
-             "config:PutRetentionConfiguration",
-             "config:StopConfigurationRecorder",
-             "config:DeliverConfigSnapshot"
-          ],
-          "Resource":"*",
-          "Condition":{
-             "ArnNotLike":{
-                "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
-             }
-          }
-       }
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "config:DeleteConfigurationAggregator",
+                "config:DeleteConfigurationRecorder",
+                "config:DeleteDeliveryChannel",
+                "config:PutConfigRule",
+                "config:DeleteConfigRule",
+                "config:DeleteOrganizationConfigRule",
+                "config:DeleteRetentionConfiguration",
+                "config:PutConfigurationAggregator",
+                "config:PutConfigurationRecorder",
+                "config:PutDeliveryChannel",
+                "config:PutRetentionConfiguration",
+                "config:StopConfigurationRecorder",
+                "config:DeliverConfigSnapshot"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "ArnNotLike": {
+                    "aws:PrincipalARN": "arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+                }
+            }
+        }
     ]
- }
- 
+}

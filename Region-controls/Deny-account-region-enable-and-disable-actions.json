@@ -4,15 +4,15 @@
         {
             "Effect": "Deny",
             "Action": [
-                "account:EnableRegion", 
-                "account:DisableRegion" 
-                    ],
+                "account:EnableRegion",
+                "account:DisableRegion"
+            ],
             "Resource": "*",
             "Condition": {
                 "ArnNotLike": {
                     "aws:PrincipalARN": "arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
                 }
-            } 
+            }
         }
     ]
- }
+}

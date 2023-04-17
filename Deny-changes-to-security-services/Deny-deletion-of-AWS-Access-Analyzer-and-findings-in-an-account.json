@@ -1,17 +1,17 @@
 {
-    "Version":"2012-10-17",
-    "Statement":[
-       {
-          "Effect":"Deny",
-          "Action":[
-             "access-analyzer:ApplyArchiveRule",
-             "access-analyzer:CreateArchiveRule",
-             "access-analyzer:DeleteAnalyzer",
-             "access-analyzer:DeleteArchiveRule",
-             "access-analyzer:UpdateArchiveRule",
-             "access-analyzer:UpdateFindings"
-          ],
-          "Resource":"*"
-       }
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "access-analyzer:ApplyArchiveRule",
+                "access-analyzer:CreateArchiveRule",
+                "access-analyzer:DeleteAnalyzer",
+                "access-analyzer:DeleteArchiveRule",
+                "access-analyzer:UpdateArchiveRule",
+                "access-analyzer:UpdateFindings"
+            ],
+            "Resource": "*"
+        }
     ]
- }
+}

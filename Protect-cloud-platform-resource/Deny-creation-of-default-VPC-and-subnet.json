@@ -1,13 +1,13 @@
 {
-    "Version":"2012-10-17",
-    "Statement":[
-       {
-          "Effect":"Deny",
-          "Action":[
-             "ec2:CreateDefaultSubnet",
-             "ec2:CreateDefaultVpc"
-          ],
-          "Resource":"*"
-       }
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "ec2:CreateDefaultSubnet",
+                "ec2:CreateDefaultVpc"
+            ],
+            "Resource": "*"
+        }
     ]
- }
+}

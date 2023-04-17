@@ -1,18 +1,18 @@
 {
-   "Version":"2012-10-17",
-   "Statement":[
-      {
-         "Effect":"Deny",
-         "Action":[
-            "iam:CreateAccessKey",
-            "iam:CreateUser"
-         ],
-         "Resource":"*",
-         "Condition":{
-            "StringNotLike":{
-               "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "iam:CreateAccessKey",
+                "iam:CreateUser"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringNotLike": {
+                    "aws:PrincipalARN": "arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+                }
             }
-         }
-      }
-   ]
+        }
+    ]
 }

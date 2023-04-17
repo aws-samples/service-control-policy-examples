@@ -1,22 +1,21 @@
 {
-    "Version":"2012-10-17",
-    "Statement":[
-       {
-          "Effect":"Deny",
-          "Action":[
-             "sns:AddPermission",
-             "sns:CreateTopic",
-             "sns:DeleteTopic",
-             "sns:RemovePermission",
-             "sns:SetTopicAttributes"
-          ],
-          "Resource":"arn:aws:sns:*:*:[SNS_TOPIC_TO_PROTECT]",
-          "Condition":{
-             "ArnNotLike":{
-                "aws:PrincipalArn":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
-             }
-          }
-       }
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "sns:AddPermission",
+                "sns:CreateTopic",
+                "sns:DeleteTopic",
+                "sns:RemovePermission",
+                "sns:SetTopicAttributes"
+            ],
+            "Resource": "arn:aws:sns:*:*:[SNS_TOPIC_TO_PROTECT]",
+            "Condition": {
+                "ArnNotLike": {
+                    "aws:PrincipalArn": "arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+                }
+            }
+        }
     ]
- }
- 
+}

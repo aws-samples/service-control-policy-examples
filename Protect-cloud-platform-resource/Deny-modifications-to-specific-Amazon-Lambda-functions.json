@@ -1,28 +1,27 @@
 {
-    "Version":"2012-10-17",
-    "Statement":[
-       {
-          "Effect":"Deny",
-          "Action":[
-             "lambda:AddPermission",
-             "lambda:CreateEventSourceMapping",
-             "lambda:CreateFunction",
-             "lambda:DeleteEventSourceMapping",
-             "lambda:DeleteFunction",
-             "lambda:DeleteFunctionConcurrency",
-             "lambda:PutFunctionConcurrency",
-             "lambda:RemovePermission",
-             "lambda:UpdateEventSourceMapping",
-             "lambda:UpdateFunctionCode",
-             "lambda:UpdateFunctionConfiguration"
-          ],
-          "Resource":"arn:aws:lambda:*:*:function:[INFRASTRUCTURE_AUTOMATION_PREFIX]",
-          "Condition":{
-             "ArnNotLike":{
-                "aws:PrincipalArn":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
-             }
-          }
-       }
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "lambda:AddPermission",
+                "lambda:CreateEventSourceMapping",
+                "lambda:CreateFunction",
+                "lambda:DeleteEventSourceMapping",
+                "lambda:DeleteFunction",
+                "lambda:DeleteFunctionConcurrency",
+                "lambda:PutFunctionConcurrency",
+                "lambda:RemovePermission",
+                "lambda:UpdateEventSourceMapping",
+                "lambda:UpdateFunctionCode",
+                "lambda:UpdateFunctionConfiguration"
+            ],
+            "Resource": "arn:aws:lambda:*:*:function:[INFRASTRUCTURE_AUTOMATION_PREFIX]",
+            "Condition": {
+                "ArnNotLike": {
+                    "aws:PrincipalArn": "arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+                }
+            }
+        }
     ]
- }
- 
+}
