@@ -12,6 +12,8 @@ Enforce controls to protect your resources in cloud from being modified or delet
 | [Deny disabling default EBS encryption](Deny-disabling-default-EBS-encryption.json)|Require all EBS volumes are encrypted by default. Note : Enable your accounts for [encryption by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_key_mgmt) before implementing this policy.|
 | [Deny KMS key deletion](Deny-KMS-key-deletion.json) |Deny the accidental or intentional deletion of a KMS key and only allow specific roles to delete KMS keys.|
 | [Deny modifications to specific AWS CloudFormation resources](Deny-modifications-to-specific-AWS-CloudFormation-resources.json) |Restrict CloudFormation actions to specific CloudFormation Stacks and StackSets that were created by an infrastructure automation framework. If you use AWS Control Tower, refer to [Disallow Changes to AWS IAM Roles Set Up by AWS Control Tower and AWS CloudFormation](https://docs.aws.amazon.com/controltower/latest/userguide/mandatory-controls.html#iam-disallow-changes) applied by default.|
+| [Protect privileged policies from being updated/deleted](Restrict-deletion-and-modification-of-privileged-policies.json) |Only allow privileged role to make updates to critical policies.Note: When implementing a policy like this, we recommend adding another policy to limit who can attach policies like this as well.|
+| [Deny deletion of specific CloudWatch Log groups and Streams](Deny-deletion-of-specific-CloudWatch-Log-groups-and-streams.json) |Deny deletion of critical Cloudwatch log groups and streams centrally created for monitoring.|
 
 
 

@@ -1,0 +1,20 @@
+{
+  "Version":"2012-10-17",
+  "Statement":[
+     {
+        "Effect":"Deny",
+        "Action":[
+           "iam:DeletePolicy",
+           "iam:CreatePolicyVersion",
+           "iam:DeletePolicyVersion",
+           "iam:SetDefaultPolicyVersion"
+        ],
+        "Resource":"arn:aws:iam::*:policy/[PRIVILEGED_POLICY_PATH/*]",
+        "Condition":{
+           "ArnNotLike":{
+              "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+           }
+        }
+     }
+  ]
+}

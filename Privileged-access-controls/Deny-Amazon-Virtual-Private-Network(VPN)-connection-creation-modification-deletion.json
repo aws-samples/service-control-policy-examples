@@ -1,0 +1,36 @@
+{
+  "Version":"2012-10-17",
+  "Statement":[
+     {
+        "Effect":"Deny",
+        "Action":[
+           "ec2:CreateVPNGateway",
+           "ec2:AttachVPNGateway",
+           "ec2:DeleteVpnGateway",
+           "ec2:DetachVpnGateway",
+           "ec2:CreateCustomerGateway",
+           "ec2:CreateVpnConnection",
+           "ec2:ModifyVpnConnection",
+           "ec2:DeleteVpnConnection",
+           "ec2:CreateClientVpnEndpoint",
+           "ec2:ModifyClientVpnEndpoint",
+           "ec2:AssociateClientVpnTargetNetwork",
+           "ec2:AuthorizeClientVpnIngress",
+           "ec2:RevokeClientVpnIngress",
+           "ec2:TerminateClientVpnConnections",
+           "ec2:DeleteVpnConnectionRoute",
+           "ec2:CreateClientVpnRoute",
+           "ec2:DeleteClientVpnRoute",
+           "ec2:DeleteVpnConnectionRoute",
+           "ec2:ApplySecurityGroupsToClientVpnTargetNetwork",
+           "ec2:DisassociateClientVpnTargetNetwork"
+        ],
+        "Resource":"*",
+        "Condition":{
+           "ArnNotLike":{
+              "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+           }
+        }
+     }
+  ]
+}

@@ -7,7 +7,7 @@
 
 A [Service control policy (SCP)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html), when attached to an AWS organization, organization unit or an account offers a central control over the maximum available permissions for all accounts in your organization, organization unit or an account. As an SCP can be applied at multiple levels in an AWS organization. You can take advantage of [policy inheritance](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_inheritance_auth.html). For in depth look at how to get more out of SCPs, visit [blog](https://aws.amazon.com/blogs/security/get-more-out-of-service-control-policies-in-a-multi-account-environment/).
 
-We recommend that you organize accounts using [OUs based on function](https://docs.aws.amazon.com/whitepapers/latest/organizing-your-aws-environment/benefits-of-using-ous.html#group-similar-accounts-based-on-function), compliance requirements, or a common set of controls rather than mirroring your organization’s reporting structure. For more details, reference: [Design principles for your multi-account strategy](https://docs.aws.amazon.com/whitepapers/latest/organizing-your-aws-environment/design-principles-for-your-multi-account-strategy.html). If you are getting started with setting up your AWS Organizations organization, we recommend watching [Morgan Stanley showcase their AWS Organization and SCP evolution journey and lessons learnt along the way](https://youtu.be/KFphCnN8WJo?t=1592).
+We recommend that you organize accounts using [OUs based on function](https://docs.aws.amazon.com/whitepapers/latest/organizing-your-aws-environment/benefits-of-using-ous.html#group-similar-accounts-based-on-function), compliance requirements, or a common set of controls rather than mirroring your organization’s reporting structure. For more details, reference: [Design principles for your multi-account strategy](https://docs.aws.amazon.com/whitepapers/latest/organizing-your-aws-environment/design-principles-for-your-multi-account-strategy.html). If you are getting started with setting up your AWS Organizations organization, we recommend watching [Morgan Stanley](https://youtu.be/KFphCnN8WJo?t=1592) and [Inter & Co.](https://www.youtube.com/watch?v=rP8AboiFAoQ&ab_channel=AWSEvents) showcase their AWS Organization and SCP evolution journey and lessons learnt along the way.
 
  
 
@@ -53,7 +53,11 @@ If you are just starting to implement SCPs in your environment, consider top 5 r
 
 * [Get more out of service control policies in a multi-account environment](https://aws.amazon.com/blogs/security/get-more-out-of-service-control-policies-in-a-multi-account-environment/)
 
+* [Achieving operational excellence with design considerations for AWS Organizations SCPs](https://aws.amazon.com/blogs/mt/achieving-operational-excellence-with-design-considerations-for-aws-organizations-scps/)
+
 * [AWS re:Inforce 2022 - Getting more out of your service control policies, featuring Morgan Stanley](https://www.youtube.com/watch?v=KFphCnN8WJo&t=1578s&ab_channel=AWSEvents)
+
+* [AWS re:Inforce 2023 - Create enterprise-wide preventive guardrails, featuring Inter & Co.](https://www.youtube.com/watch?v=rP8AboiFAoQ&ab_channel=AWSEvents)
 
 * Pull requests : https://github.com/aws-samples/service-control-policy-examples/pulls
 

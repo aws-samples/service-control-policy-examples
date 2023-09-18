@@ -1,0 +1,22 @@
+{
+    "Version":"2012-10-17",
+    "Statement":[
+       {
+          "Effect":"Deny",
+          "Action":[
+             "logs:DeleteLogGroup",
+             "logs:PutRetentionPolicy",
+             "logs:DeleteLogStream"
+          ],
+          "Resource":[
+             "arn:aws:logs:*:*:log-group:[LOG_GROUP_NAME]",
+             "arn:aws:logs:*:*:log-group:[LOG_GROUP_NAME]:log-stream:[LOG_GROUP_STREAM]"
+          ],
+          "Condition":{
+             "ArnNotLike":{
+                "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+             }
+          }
+       }
+    ]
+ }

@@ -1,0 +1,30 @@
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Deny",
+         "Action":[
+            "account:PutContactInformation",
+            "account:PutChallengeQuestions",
+            "account:PutAlternateContact",
+            "account:DeleteAlternateContact",
+            "account:CloseAccount",
+            "billing:UpdateBillingPreferences",
+            "billing:PutContractInformation",
+            "billing:UpdateIAMAccessPreference",
+            "invoicing:PutInvoiceEmailDeliveryPreferences",
+            "payments:DeletePaymentInstrument",
+            "payments:UpdatePaymentPreferences",
+            "tax:BatchPutTaxRegistration",
+            "tax:DeleteTaxRegistration",
+            "tax:PutTaxInheritance"
+         ],
+         "Resource":"*",
+         "Condition":{
+            "ArnNotLike":{
+               "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+            }
+         }
+      }
+   ]
+}
