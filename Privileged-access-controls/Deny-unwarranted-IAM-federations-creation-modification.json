@@ -1,0 +1,22 @@
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Deny",
+         "Action":[
+            "iam:CreateOpenIDConnectProvider",
+            "iam:CreateSAMLProvider",
+            "iam:DeleteOpenIDConnectProvider",
+            "iam:DeleteSAMLProvider",
+            "iam:UpdateOpenIDConnectProviderThumbprint",
+            "iam:UpdateSAMLProvider"
+         ],
+         "Resource":"*",
+         "Condition":{
+            "ArnNotLike":{
+               "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+            }
+         }
+      }
+   ]
+}

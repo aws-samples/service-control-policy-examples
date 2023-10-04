@@ -14,6 +14,7 @@ Enforce controls to protect your resources in cloud from being modified or delet
 | [Deny modifications to specific AWS CloudFormation resources](Deny-modifications-to-specific-AWS-CloudFormation-resources.json) |Restrict CloudFormation actions to specific CloudFormation Stacks and StackSets that were created by an infrastructure automation framework. If you use AWS Control Tower, refer to [Disallow Changes to AWS IAM Roles Set Up by AWS Control Tower and AWS CloudFormation](https://docs.aws.amazon.com/controltower/latest/userguide/mandatory-controls.html#iam-disallow-changes) applied by default.|
 | [Protect privileged policies from being updated/deleted](Restrict-deletion-and-modification-of-privileged-policies.json) |Only allow privileged role to make updates to critical policies.Note: When implementing a policy like this, we recommend adding another policy to limit who can attach policies like this as well.|
 | [Deny deletion of specific CloudWatch Log groups and Streams](Deny-deletion-of-specific-CloudWatch-Log-groups-and-streams.json) |Deny deletion of critical Cloudwatch log groups and streams centrally created for monitoring.|
-
+| [Deny CloudHSM deletion](Deny-CloudHSM-deletion.json) |Deny the accidental or intentional deletion of a CloudHSM devices.|
+| [Deny key actions on Route53 DNS hosted zones](Deny-key-actions-on-Route53-DNS-hosted-zones.json) |Deny route53 domain transfer, modification and deletion.|
 
 
