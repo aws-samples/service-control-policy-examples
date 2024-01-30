@@ -1,0 +1,18 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Deny",
+			"Action": [
+				"ram:CreateResourceShare",
+				"ram:UpdateResourceShare"
+			],
+			"Resource": "*",
+			"Condition": {
+				"Bool": {
+					"ram:RequestedAllowsExternalPrincipals": "true"
+				}
+			}
+		}
+	]
+}

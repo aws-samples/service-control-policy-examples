@@ -1,0 +1,18 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Deny",
+			"Action": [
+				"lambda:CreateFunctionUrlConfig",
+				"lambda:UpdateFunctionUrlConfig"
+			],
+			"Resource": "arn:aws:lambda:*:*:function/*",
+			"Condition": {
+				"StringNotEquals": {
+					"lambda:FunctionUrlAuthType": "AWS_IAM"
+				}
+			}
+		}
+	]
+}
