@@ -16,5 +16,6 @@ Enforce controls to protect your resources in cloud from being modified or delet
 | [Deny deletion of specific CloudWatch Log groups and Streams](Deny-deletion-of-specific-CloudWatch-Log-groups-and-streams.json) |Deny deletion of critical Cloudwatch log groups and streams centrally created for monitoring.|
 | [Deny CloudHSM deletion](Deny-CloudHSM-deletion.json) |Deny the accidental or intentional deletion of a CloudHSM devices.|
 | [Deny key actions on Route53 DNS hosted zones](Deny-key-actions-on-Route53-DNS-hosted-zones.json) |Deny route53 domain transfer, modification and deletion.|
+| [Prevent IMDSv1](Prevent-IMDSv1.json) |EC2 instances obtain credentials for the instance IAM roles through the Instance Metadata Service (IMDS).IMDSv2 is the most recent secure version of this service, the older version, IMDSv1, should therefore be prevented.|
 
 

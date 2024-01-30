@@ -1,0 +1,45 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Deny",
+			"Action": "ec2:RunInstances",
+			"Resource": "*",
+			"Condition": {
+				"StringNotEquals": {
+					"ec2:MetadataHttpTokens": "required"
+				}
+			}
+		},
+		{
+			"Effect": "Deny",
+			"Action": "ec2:RunInstances",
+			"Resource": "*",
+			"Condition": {
+				"NumericGreaterThan": {
+					"ec2:MetadataHttpPutResponseHopLimit": "3"
+				}
+			}
+		},
+		{
+			"Effect": "Deny",
+			"Action": "*",
+			"Resource": "*",
+			"Condition": {
+				"NumericLessThan": {
+					"ec2:RoleDelivery": "2.0"
+				}
+			}
+		},
+		{
+			"Effect": "Deny",
+			"Action": "ec2:ModifyInstanceMetadataOptions",
+			"Resource": "*",
+			"Condition": {
+				"StringNotLike": {
+					"aws:PrincipalARN": "arn:aws:iam::*:role/ec2-imds-admins"
+				}
+			}
+		}
+	]
+}
