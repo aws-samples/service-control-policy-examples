@@ -1,0 +1,26 @@
+{
+    "Version":"2012-10-17",
+    "Statement":[
+       {
+          "Effect":"Deny",
+          "Action":[
+             "ssm:UpdateServiceSetting",
+             "ssm:ResetServiceSetting"
+          ],
+          "Resource":"arn:aws:ssm:*:*:servicesetting/ssm/documents/console/public-sharing-permission"
+       },
+       {
+          "Effect":"Deny",
+          "Action":[
+             "ssm:UpdateServiceSetting",
+             "ssm:ResetServiceSetting"
+          ],
+          "Resource":"arn:aws:ssm:*:*:servicesetting/ssm/managed-instance/default-ec2-instance-management-role",
+          "Condition":{
+             "ArnNotLike":{
+                "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
+             }
+          }
+       }
+    ]
+ }
