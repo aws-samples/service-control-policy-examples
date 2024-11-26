@@ -38,10 +38,11 @@ The example policies are divided into different categories based on the type of 
 ## Top SCPs to get started with
 ------------------------------------------------------------------------------
 
-If you are just starting to implement SCPs in your environment, consider top 5 recommended SCPs. 
+If you are just starting to implement SCPs in your environment, consider top recommended SCPs. 
 
 * [Deny member accounts from leaving the organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples_general.html#example-scp-leave-org) 
-* [Only allow usage of approved AWS Regions](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples_general.html#example-scp-deny-region) 
+* [Only allow usage of approved AWS Regions](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples_general.html#example-scp-deny-region)
+* [Prevent root credentials management in member accounts in AWS Organizations.](Privileged-access-controls/Prevent-root-credentials-management-in-member-accounts-in-AWS-Organizations.json) 
 * [Deny usage of the root user](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples_general.html#example-scp-root-user)
 * [Deny changes to security services](Deny-changes-to-security-services/Deny-changes-to-security-services.md)
 * [Protect your sensitive Amazon S3 buckets](Sensitive-data-protection/Deny-users-from-deleting-Amazon-S3-Buckets-or-objects.json)
