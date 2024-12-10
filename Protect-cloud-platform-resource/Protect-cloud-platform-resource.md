@@ -17,5 +17,4 @@ Enforce controls to protect your resources in cloud from being modified or delet
 | [Deny CloudHSM deletion](Deny-CloudHSM-deletion.json) |Deny the accidental or intentional deletion of a CloudHSM devices.|
 | [Deny key actions on Route53 DNS hosted zones](Deny-key-actions-on-Route53-DNS-hosted-zones.json) |Deny route53 domain transfer, modification and deletion.|
 | [Prevent IMDSv1](Prevent-IMDSv1.json) |EC2 instances obtain credentials for the instance IAM roles through the Instance Metadata Service (IMDS).IMDSv2 is the most recent secure version of this service, the older version, IMDSv1, should therefore be prevented.|
-
-
+| [Enforce 30 days for KMS key deletion](Enforce-30-days-for-KMS-deletion.json) |Safeguards production KMS keys by enforcing a minimum 30-day cooldown period before key deletion. This policy helps prevent accidental or unauthorized deletion of critical encryption keys, ensuring the security and availability of encrypted data in production environments.|
