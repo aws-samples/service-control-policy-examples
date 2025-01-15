@@ -56,6 +56,8 @@ If you are just starting to implement SCPs in your environment, consider top rec
 
 * [Achieving operational excellence with design considerations for AWS Organizations SCPs](https://aws.amazon.com/blogs/mt/achieving-operational-excellence-with-design-considerations-for-aws-organizations-scps/)
 
+* [Enforcing enterprise-wide preventive controls with AWS Organizations](https://aws.amazon.com/blogs/mt/enforcing-enterprise-wide-preventive-controls-with-aws-organizations/)
+
 * [AWS re:Inforce 2022 - Getting more out of your service control policies, featuring Morgan Stanley](https://www.youtube.com/watch?v=KFphCnN8WJo&t=1578s&ab_channel=AWSEvents)
 
 * [AWS re:Inforce 2023 - Create enterprise-wide preventive guardrails, featuring Inter & Co.](https://www.youtube.com/watch?v=rP8AboiFAoQ&ab_channel=AWSEvents)
