@@ -1,0 +1,20 @@
+name: Issue or PR notifier
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+jobs:
+  run:
+    name: Notify IS team of github activity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Draft with these release notes details
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: webhook-trigger
+          payload: |
+            {
+              "text": "A new \"${{ github.event_name }}\" has been opened on https://github.com/${{ github.repository }} . Please acknowledge the customer ASAP and :cowboy-ack: this request."
+            }
