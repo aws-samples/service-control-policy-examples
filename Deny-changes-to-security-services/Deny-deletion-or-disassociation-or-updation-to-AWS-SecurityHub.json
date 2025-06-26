@@ -6,10 +6,8 @@
             "Action": [
                 "securityhub:DeleteInvitations",
                 "securityhub:BatchDisableStandards",
-                "securityhub:DeleteInvitations",
                 "securityhub:DeleteActionTarget",
                 "securityhub:DeleteInsight",
-                "securityhub:DeleteInvitations",
                 "securityhub:TagResource",
                 "securityhub:UntagResource",
                 "securityhub:UpdateStandardsControl",
@@ -20,6 +18,12 @@
                 "securityhub:DisassociateFromMasterAccount",
                 "securityhub:DeleteMembers",
                 "securityhub:DisassociateMembers",
+                "securityhub:DisableSecurityHubV2",
+                "securityhub:DeleteConfigurationPolicy",
+                "securityhub:BatchDeleteAutomationRules",
+                "securityhub:DeleteAutomationRuleV2",
+                "securityhub:DisassociateFromAdministratorAccount",
+                "securityhub:DeleteConnectorV2",
                 "securityhub:DisableImportFindingsForProduct"
             ],
             "Resource": "*",
