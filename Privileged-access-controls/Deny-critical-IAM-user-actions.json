@@ -1,23 +1,27 @@
 {
-   "Version":"2012-10-17",
-   "Statement":[
-      {
-         "Effect":"Deny",
-         "Action":[
-            "iam:CreateAccessKey",
-            "iam:CreateUser",
-            "iam:UpdateLoginProfile",
-            "iam:CreateLoginProfile",
-            "iam:DeleteLoginProfile",
-            "iam:UpdateAccountPasswordPolicy",
-            "iam:DeleteAccountPasswordPolicy"
-         ],
-         "Resource":"*",
-         "Condition":{
-            "ArnNotLike":{
-               "aws:PrincipalARN":"arn:aws:iam::${Account}:role/[PRIVILEGED_ROLE]"
-            }
-         }
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Action": [
+        "iam:CreateAccessKey",
+        "iam:CreateUser",
+        "iam:UpdateLoginProfile",
+        "iam:CreateLoginProfile",
+        "iam:DeleteLoginProfile",
+        "iam:UpdateAccountPasswordPolicy",
+        "iam:DeleteAccountPasswordPolicy",
+        "iam:CreateServiceSpecificCredential"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "ArnNotLike": {
+          "aws:PrincipalArn": "arn:aws:iam::*:role/[PRIVILEGED_ROLE]"
+        },
+        "StringNotLike": {
+          "aws:PrincipalTag/IAMUserManagementException": "true"
+        }
       }
-   ]
+    }
+  ]
 }
