@@ -30,6 +30,8 @@ The example policies are divided into different categories based on the type of 
   
 * **[Sensitive data protection](Sensitive-data-protection/README.md)**: Implement controls that protect your sensitive data, that should not be made publicly accessible or deleted intentionally or unintentionally.
 
+* **[Service Specific Controls](Service-Specific-Controls/README.md)**: Controls for specific AWS services
+
 
 
 
