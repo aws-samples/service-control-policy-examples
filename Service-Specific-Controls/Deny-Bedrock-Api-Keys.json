@@ -2,7 +2,7 @@
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid":"DenyBedRockShortAndLongTermAPIKeys",
+      "Sid":"DenyBedrockShortAndLongTermAPIKeys",
       "Effect": "Deny",
       "Action": [
         "iam:CreateServiceSpecificCredential",
