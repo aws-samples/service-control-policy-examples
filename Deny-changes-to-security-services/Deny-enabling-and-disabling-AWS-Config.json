@@ -18,7 +18,13 @@
              "config:StopConfigurationRecorder",
              "config:DeliverConfigSnapshot",
              "config:DeleteAggregationAuthorization",
-             "config:DeleteEvaluationResults"
+             "config:DeleteEvaluationResults",
+             "config:PutOrganizationConfigRule",
+             "config:PutRemediationConfigurations",
+             "config:DeleteRemediationConfiguration",
+             "config:DeleteServiceLinkedConfigurationRecorder",
+             "config:DeleteRemediationExceptions",
+             "config:DeletePendingAggregationRequest" 
           ],
           "Resource":"*",
           "Condition":{
