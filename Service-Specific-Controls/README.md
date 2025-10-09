@@ -1,4 +1,4 @@
-## Service Specific Controls
+## Service specific controls
 
 These policies provide guidance on how to accomplish security objectives for specific AWS services.
 
