@@ -1,4 +1,4 @@
-## Service Control Policy examples
+## Service control policy examples
 ------------------------------------------------------------------------------
 
 **The service control policies in this repository are shown as examples. You should not attach SCPs without thoroughly testing the impact that the policy has on accounts. Once you have a policy ready that you would like to implement, we recommend testing in a separate organization or OU that can be represent your production environment. Once tested, you should deploy changes to more specific OUs and then slowly deploy the changes to broader and broader OUs over time.**
@@ -30,7 +30,7 @@ The example policies are divided into different categories based on the type of 
   
 * **[Sensitive data protection](Sensitive-data-protection/README.md)**: Implement controls that protect your sensitive data, that should not be made publicly accessible or deleted intentionally or unintentionally.
 
-* **[Service specific controls](Service-specific-controls/README.md)**: Controls for specific AWS services
+* **[Service specific controls](Service-Specific-Controls/README.md)**: Controls for specific AWS services
 
 
 
