@@ -3,7 +3,7 @@
 AWS offers security services that help you monitor access, security posture, and activity within your organization. Enforce guardrails to restrict member accounts from disabling these tools that are used to govern and comply, in operational auditing, and risk auditing of your AWS accounts. 
 
 
-| Included Policy | Rational | 
+| Included Policy | Rationale | 
 |------|-------------|
 |[Deny users from disabling Amazon CloudWatch or altering its configuration](Deny-users-from-disabling-or-altering-CloudWatch.json)| Restrict delete or configuration change to your critical dashboards or alarms to a privileged role.|
 | [Deny enabling and disabling AWS Config](Deny-enabling-and-disabling-AWS-Config.json) |Restrict enabling/disabling AWS Config to a privileged role. If you use AWS Control Tower, refer to [Disallow Changes to AWS Config Rules Set Up by AWS Control Tower](https://docs.aws.amazon.com/controltower/latest/userguide/mandatory-controls.html#config-rule-disallow-changes) applied by default.|
