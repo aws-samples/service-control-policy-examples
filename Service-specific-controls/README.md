@@ -5,10 +5,11 @@ These policies provide guidance on how to accomplish security objectives for spe
 **Amazon Bedrock**
 
 
-| Included policy | Rationale | 
+| Included policy | Rationale |
 |------|-------------|
 |[Deny users from using short term or creating long term Amazon Bedrock API keys](Amazon-Bedrock/Deny-Bedrock-api-keys.json)| Used to help enforce that users within your AWS organization cannot create service specific credentials for an IAM user for use with Amazon Bedrock, and denies the usage of Bedrock API keys with the Amazon Bedrock Service.|
 |[Deny users from creating long term Amazon Bedrock API keys valid for more than 30 days](Amazon-Bedrock/Deny-Bedrock-api-keys-longer-than-30-days.json) | Used to help enforce that users within your AWS organization cannot create service specific credentials for amazon bedrock (AKA long-lived Bedrock API keys) that are valid for longer than 30 days. |
+|[Deny users from using long term Amazon Bedrock API keys](Amazon-Bedrock/Deny-Bedrock-long-term-api-keys.json) | Restrict users and roles from calling Amazon Bedrock API with long-term bearer tokens while allowing short-term bearer tokens. This provides a middle ground by permitting temporary credentials while blocking persistent API keys.|
 |[Deny users from invoking and subscribing to the unapproved Bedrock models](Amazon-Bedrock/Deny-Bedrock-model-invocation-except-approved-models.json) | Restrict users and roles from invoking and subscribing to the unapproved Bedrock foundation models. Replace `<unique-identifier>` with specific model provider name like `amazon`, to allow developers access to the Amazon foundation models.|
 
 **Amazon EC2**
