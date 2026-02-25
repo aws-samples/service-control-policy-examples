@@ -1,0 +1,16 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenySAMLProviderChanges",
+      "Effect": "Deny",
+      "Action": [
+        "iam:UpdateSAMLProvider",
+        "iam:DeleteSAMLProvider"
+      ],
+      "Resource": [
+        "arn:aws:iam::*:saml-provider/AWSSSO_*"
+      ]
+    }
+  ]
+}
