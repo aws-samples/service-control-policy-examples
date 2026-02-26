@@ -13,6 +13,8 @@ AWS offers security services that help you monitor access, security posture, and
 |[Protect disabling/deleting Amazon Macie](Protect-disabling-or-deleting-Amazon-Macie.json)| Restrict disabling/deleting member accounts or disassociating an account from a master Macie account action to a privileged role.|
 |[Deny deletion or disassociation of members and invitations from AWS SecurityHub](Deny-deletion-or-disassociation-or-updation-to-AWS-SecurityHub.json)| Restrict disabling and updating SecurityHub, deleting member accounts or disassociating an account from a master SecurityHub account to a privileged role.|
 |[Use AWS IAM Identity Center for AWS Managed Applications or Trusted Identity Propagation Only](Deny-permission-sets-for-AWS-IAM-Identity-Center.json)| Does not allow the creation or modification of permission sets for an Identity Center delegated admin account, helping ensure Identity Center is only used for Applications and Trusted Identity Propagation|
+|[Deny SAML provider changes for AWS IAM Identity Center](Deny-SAML-provider-changes-for-AWS-IAM-Identity-Center.json)| Prevents modifications or deletion of SAML providers used by IAM Identity Center (AWSSSO_* providers)|
+|[Deny account instance creation for AWS IAM Identity Center](Deny-account-instance-creation-for-AWS-IAM-Identity-Center.json)| Prevents member accounts from creating account instances of IAM Identity Center, ensuring centralized control over Identity Center deployment|
 
 
 
