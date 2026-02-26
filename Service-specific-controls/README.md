@@ -34,3 +34,10 @@ These policies provide guidance on how to accomplish security objectives for spe
 |[Deny users from modifying S3 Block Public Access(Bucket level)](Amazon-S3/Deny-users-from-modifying-S3-Block-Public-Access-bucket-level.json)|Deny users or roles in any affected account from modifying the S3 Block Public Access bucket level settings.|
 |[Deny users from modifying S3 Block Public Access (Account Level)](Amazon-S3/Deny-users-from-modifying-S3-Block-Public-Access.json) |Deny users or roles in any affected account from modifying the S3 Block Public Access Account level settings.Note: When you apply block public access settings to an account, the settings apply to all AWS Regions globally.|
 |[Prevent S3 unencrypted object uploads](Amazon-S3/Prevent-Amazon-S3-unencrypted-object-uploads.json)|Restrict users and roles from uploading objects to Amazon S3 unless server-side encryption is enabled to ensure data is encrypted at rest.|
+
+
+**Amazon EKS**
+
+| Included policy | Rationale | 
+|------|-------------|
+|[Deny Tagging Roles and users with EKS Pod Identities Tags](Amazon-EKS/ProtectPodIdentitiesTagsOnRolesAndUsers.json)| Help ensure that no one can tag IAM users and roles with the tags specific to EKS Pod Identities. This is useful in partnership with an RCP to help ensure that only AWS service principals can set these session tags, and there is an example of this on our [Resource Control Policy example repo](https://github.com/aws-samples/resource-control-policy-examples/tree/main/Service-specific-controls) |

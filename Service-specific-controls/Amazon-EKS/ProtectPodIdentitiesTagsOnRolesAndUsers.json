@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PreventTaggingOfUsersAndRolesWithEKSSpecificTags",
+      "Effect": "Deny",
+      "Action": [
+        "iam:TagRole",
+        "iam:TagUser"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "ForAnyValue:StringEquals": {
+          "aws:TagKeys": [
+            "eks-cluster-arn",
+            "eks-cluster-name",
+            "kubernetes-namespace",
+            "kubernetes-service-account",
+            "kubernetes-pod-name",
+            "kubernetes-pod-uid"
+          ]
+        }
+      }
+    }
+  ]
+}
