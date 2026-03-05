@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PreventTaggingOfUsersAndRolesWithIAMRASpecificTags",
+      "Effect": "Deny",
+      "Action": [
+        "iam:TagRole",
+        "iam:TagUser"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "ForAnyValue:StringLike": {
+          "aws:TagKeys": [
+            "x509Issuer*,
+            "x509Subject*",
+            "x509SAN*"
+          ]
+        }
+      }
+    }
+  ]
+}
