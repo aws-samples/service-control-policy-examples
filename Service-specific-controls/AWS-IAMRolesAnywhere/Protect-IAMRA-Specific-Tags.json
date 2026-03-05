@@ -12,7 +12,7 @@
       "Condition": {
         "ForAnyValue:StringLike": {
           "aws:TagKeys": [
-            "x509Issuer*,
+            "x509Issuer*",
             "x509Subject*",
             "x509SAN*"
           ]
