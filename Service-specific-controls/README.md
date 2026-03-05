@@ -45,5 +45,5 @@ These policies provide guidance on how to accomplish security objectives for spe
 Service-specific-controls/AWS-IAMRolesAnywhere/Protect-IAMRA-Specific-Tags.json
 | Included policy | Rationale | 
 |------|-------------|
-|[Deny Tagging Roles and users with IAM Roles Anywhere Tags](AWS-IAMRolesAnywhere/Protect-IAMRA-Specific-Tags.json| Help ensure that no one can tag IAM users and roles with the tags specific to IAM Roles Anywhere. This is useful in partnership with an RCP to help ensure that only AWS service principals can set these as session tags, and there is an example of this on our [Resource Control Policy example repo](https://github.com/aws-samples/resource-control-policy-examples/tree/main/Service-specific-controls) |
+|[Deny Tagging Roles and users with IAM Roles Anywhere Tags](AWS-IAMRolesAnywhere/Protect-IAMRA-Specific-Tags.json)| Help ensure that no one can tag IAM users and roles with the tags specific to IAM Roles Anywhere. This is useful in partnership with an RCP to help ensure that only AWS service principals can set these as session tags, and there is an example of this on our [Resource Control Policy example repo](https://github.com/aws-samples/resource-control-policy-examples/tree/main/Service-specific-controls) |
 
