@@ -46,3 +46,9 @@ These policies provide guidance on how to accomplish security objectives for spe
 |------|-------------|
 |[Deny Tagging Roles and users with IAM Roles Anywhere Tags](AWS-IAMRolesAnywhere/Protect-IAMRA-Specific-Tags.json)| Help ensure that no one can tag IAM users and roles with the tags specific to IAM Roles Anywhere. This is useful in partnership with an RCP to help ensure that only AWS service principals can set these as session tags, and there is an example of this on our [Resource Control Policy example repo](https://github.com/aws-samples/resource-control-policy-examples/tree/main/Service-specific-controls) |
 
+**AWS IAM*
+| Included policy | Rationale | 
+|------|-------------|
+|[Deny Creating Any Service Specific Credentials](AWS-IAM/deny-creating-any-service-specific-credentials.json)| This policy contains two statements. The first "DenyCreatingAnyServiceSpecificCredential" is a blanket deny that will help prevent any service specific credential from being created. The Second "DenyCreatingAnyServiceSpecificWithExceptionBasedOnTag" accomplishes the same thing, but with an example of an exception mechansim where an IAM user with the tag of "ServiceSpecificCredentialAllowed" with a value of "true" will not be subject to the denial and could have a service specific credential. Use whichever of these statements helps you accomplish your objectives best. |
+|[Deny Creating Types of Service Specific Credentials](AWS-IAM/deny-service-specific-credential-by-type.json)| This policy example contains an example which lets you list which types of IAM service specific credentials you wish to deny. You may add or remove services from this list which support service specific credentials. Creation of service specific credentials for all named services in the list will be denied. |
+
