@@ -1,0 +1,16 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RequireAccountRegionalBucketCreation",
+      "Effect": "Deny",
+      "Action": "s3:CreateBucket",
+      "Resource": "*",
+      "Condition": {
+        "StringNotEqualsIfExists": {
+          "s3:x-amz-bucket-namespace": "account-regional"
+        }
+      }
+    }
+  ]
+}
