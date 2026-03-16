@@ -32,6 +32,7 @@ These policies provide guidance on how to accomplish security objectives for spe
 |[Deny ACL disablement for all new buckets (bucket owner enforced)](Amazon-S3/Deny-ACL-disablement-for-all-new-buckets.json)|Require that all new buckets are created with ACLs disabled. Note: When you apply this setting, ACLs are disabled and you automatically own and have full control over all objects in your bucket.|
 |[Deny users from deleting Amazon S3 buckets or objects](Amazon-S3/Deny-users-from-deleting-Amazon-S3-buckets-or-objects.json)|Restrict users or roles in any affected account from deleting S3 bucket or objects. You can also consider adding this policy as bucket policy on the sensitive buckets.|
 |[Prevent S3 unencrypted object uploads](Amazon-S3/Prevent-Amazon-S3-unencrypted-object-uploads.json)|Restrict users and roles from uploading objects to Amazon S3 unless server-side encryption is enabled to ensure data is encrypted at rest.|
+|[Require S3 regional account namespaces be used](Amazon-S3/enforce-s3-bucket-namespace.json)|Require that s3 buckets are created within an account-regional namespace to help protect against bucket squatting.|
 
 
 **Amazon EKS**
