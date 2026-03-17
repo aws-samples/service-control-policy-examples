@@ -18,7 +18,6 @@
            "ec2:AuthorizeClientVpnIngress",
            "ec2:RevokeClientVpnIngress",
            "ec2:TerminateClientVpnConnections",
-           "ec2:DeleteVpnConnectionRoute",
            "ec2:CreateClientVpnRoute",
            "ec2:DeleteClientVpnRoute",
            "ec2:DeleteVpnConnectionRoute",
