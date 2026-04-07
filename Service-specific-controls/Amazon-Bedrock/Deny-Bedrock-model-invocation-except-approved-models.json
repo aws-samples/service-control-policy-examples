@@ -1,14 +1,26 @@
 {
-   "Version":"2012-10-17",
-   "Statement":[
-      {
-         "Effect":"Deny",
-         "Action":[
-            "bedrock:InvokeModel",
-            "bedrock:InvokeModelWithResponseStream",
-            "bedrock:PutFoundationModelEntitlement"
-         ],
-         "NotResource":"arn:aws:bedrock:*::foundation-model/<unique-identifier>.*"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyUsageOfModelsWithBedrock",
+      "Effect": "Deny",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:PutFoundationModelEntitlement"
+      ],
+      "NotResource": "arn:aws:bedrock:*::foundation-model/<unique-identifier>.*"
+    },
+    {
+      "Sid": "DenyUsageOfModelsWithBedrockMantle",
+      "Effect": "Deny",
+      "Action": "bedrock-mantle:*",
+      "Resource": "*",
+      "Condition": {
+        "StringLike": {
+          "bedrock-mantle:Model": "<model-identifier>"
+        }
       }
-   ]
+    }
+  ]
 }
