@@ -81,7 +81,7 @@
                     ]
                 },
                 "ArnNotLike": {
-                    "bedrock:InferenceProfileArn": "arn:aws:bedrock:*:*:inference-profile/{example-inference-profile}"
+                    "bedrock:InferenceProfileArn": "arn:aws:bedrock:*:*:inference-profile/{example-inference-profile-geographic-prefix}
                 }
             }
         }
