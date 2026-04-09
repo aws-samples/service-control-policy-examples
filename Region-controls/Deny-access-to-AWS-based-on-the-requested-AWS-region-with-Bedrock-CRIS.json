@@ -55,8 +55,8 @@
             "Condition": {
                 "StringNotEquals": {
                     "aws:RequestedRegion": [
-                        "eu-central-1",
-                        "eu-west-1"
+                        "{example-region-1}",
+                        "{example-region-2}"
                     ]
                 },
                 "ArnNotLike": {
@@ -76,12 +76,12 @@
             "Condition": {
                 "StringNotEquals": {
                     "aws:RequestedRegion": [
-                        "eu-central-1",
-                        "eu-west-1"
+                        "{example-region-1}",
+                        "{example-region-2}"
                     ]
                 },
                 "ArnNotLike": {
-                    "bedrock:InferenceProfileArn": "arn:aws:bedrock:*:*:inference-profile/eu.*"
+                    "bedrock:InferenceProfileArn": "arn:aws:bedrock:*:*:inference-profile/{example-inference-profile}"
                 }
             }
         }
