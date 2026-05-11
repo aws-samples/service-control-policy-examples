@@ -53,3 +53,9 @@ These policies provide guidance on how to accomplish security objectives for spe
 |[Deny Creating Any Service Specific Credentials](AWS-IAM/deny-creating-any-service-specific-credentials.json)| This policy contains two statements. The first "DenyCreatingAnyServiceSpecificCredential" is a blanket deny that will help prevent any service specific credential from being created. The Second "DenyCreatingAnyServiceSpecificWithExceptionBasedOnTag" accomplishes the same thing, but with an example of an exception mechansim where an IAM user with the tag of "ServiceSpecificCredentialAllowed" with a value of "true" will not be subject to the denial and could have a service specific credential. Use whichever of these statements helps you accomplish your objectives best. |
 |[Deny Creating Types of Service Specific Credentials](AWS-IAM/deny-service-specific-credential-by-type.json)| This policy example contains an example which lets you list which types of IAM service specific credentials you wish to deny. You may add or remove services from this list which support service specific credentials. Creation of service specific credentials for all named services in the list will be denied. |
 
+
+**AWS External Anthropic**
+
+| Included policy | Rationale | 
+|------|-------------|
+|[Deny all aws-external-anthropic actions](AWS-External-Anthropic/Deny-all-aws-external-anthropic-actions.json)| Restrict users and roles from accessing Anthropic models directly through the external Anthropic service. This helps enforce that users access Anthropic models through Amazon Bedrock instead, where data guardrails and governance controls can be applied.|
