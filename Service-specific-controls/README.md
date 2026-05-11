@@ -58,4 +58,4 @@ These policies provide guidance on how to accomplish security objectives for spe
 
 | Included policy | Rationale | 
 |------|-------------|
-|[Deny all aws-external-anthropic actions](AWS-External-Anthropic/Deny-all-aws-external-anthropic-actions.json)| Restrict users and roles from accessing Anthropic models directly through the external Anthropic service. This helps enforce that users access Anthropic models through Amazon Bedrock instead, where data guardrails and governance controls can be applied.|
+|[Deny all aws-external-anthropic actions](AWS-External-Anthropic/Deny-all-aws-external-anthropic-actions.json)| Restrict users and roles from accessing Anthropic models directly through the external Anthropic service. We recommend access to models through Amazon Bedrock instead, with data controls applied.|
