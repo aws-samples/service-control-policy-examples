@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyIdentityStoreMutations",
+      "Effect": "Deny",
+      "Action": [
+        "identitystore:Create*",
+        "identitystore:Update*",
+        "identitystore:Delete*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
