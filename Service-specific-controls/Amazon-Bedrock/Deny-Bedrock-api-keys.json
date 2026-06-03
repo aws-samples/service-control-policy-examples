@@ -13,7 +13,10 @@
     },
     {
       "Effect": "Deny",
-      "Action": "bedrock:CallWithBearerToken",
+      "Action": [
+      "bedrock:CallWithBearerToken",
+      "bedrock-mantle:CallWithBearerToken"
+      ],
       "Resource": "*"
     }
   ]
