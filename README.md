@@ -60,6 +60,8 @@ If you are just starting to implement SCPs in your environment, consider top rec
 
 * [Enforcing enterprise-wide preventive controls with AWS Organizations](https://aws.amazon.com/blogs/mt/enforcing-enterprise-wide-preventive-controls-with-aws-organizations/)
 
+* [AWS Organizations service control policy now supports full IAM language](https://aws.amazon.com/blogs/security/unlock-new-possibilities-aws-organizations-service-control-policy-now-supports-full-iam-language/)
+
 * [AWS re:Inforce 2022 - Getting more out of your service control policies, featuring Morgan Stanley](https://www.youtube.com/watch?v=KFphCnN8WJo&t=1578s&ab_channel=AWSEvents)
 
 * [AWS re:Inforce 2023 - Create enterprise-wide preventive guardrails, featuring Inter & Co.](https://www.youtube.com/watch?v=rP8AboiFAoQ&ab_channel=AWSEvents)
