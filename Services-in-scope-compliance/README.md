@@ -231,45 +231,45 @@ The featured scp-hcl-hipaa-service.json includes APIs for other tools / services
 
 ### Service Catagory - Cost Management
 
-- "aws-portal:\*"
-- "budgets:\*"
-- "ce:\*"
-- "cur:\*"
-- "bcm-data-exports:\*"
-- "pricing:\*"
+- "IAM Namespace": "aws-portal:\*"
+- "IAM Namespace": "budgets:\*"
+- "IAM Namespace": "ce:\*"
+- "IAM Namespace": "cur:\*"
+- "IAM Namespace": "bcm-data-exports:\*"
+- "IAM Namespace": "pricing:\*"
 
 ### Service Catagory - Identity and Access Management
 
-- "apiname": "iam:\*"
-- "apiname": "access-analyzer:\*"
-- "apiname": "sts:\*"
+- "IAM Namespace": "iam:\*"
+- "IAM Namespace": "access-analyzer:\*"
+- "IAM Namespace": "sts:\*"
 
 ### Service Catagory - Compliance
 
-- "apiname": "artifact:\*"
+- "IAM Namespace": "artifact:\*"
 
 ### Service Catagory - License Manager
 
-- "apiname": "license-manager:\*"
+- "IAM Namespace": "license-manager:\*"
 
 ### Service Catagory - Resource Management
 
-- "apiname": "resource-groups:\*"
-- "apiname": "resource-explorer:\*"
-- "apiname": "tag:\*"
+- "IAM Namespace": "resource-groups:\*"
+- "IAM Namespace": "resource-explorer:\*"
+- "IAM Namespace": "tag:\*"
 
 
 ### Service Catagory - Support
 
-- "apiname": "support:\*"
-- "apiname": "supportplans:\*"
-- "apiname": "trustedadvisor:\*"
+- "IAM Namespace": "support:\*"
+- "IAM Namespace": "supportplans:\*"
+- "IAM Namespace": "trustedadvisor:\*"
 
 ### Service Catagory - Monitoring / Telemetry
 
-- "apiname": "pi:\*"
-- "apiname": "applicationinsights:\*"
+- "IAM Namespace": "pi:\*"
+- "IAM Namespace": "applicationinsights:\*"
 
 ### Service Catagory - Notable Tools not intended to store, process, or transmit PHI
 
-- "apiname": "qdeveloper:\*"
+- "IAM Namespace": "qdeveloper:\*"
