@@ -40,6 +40,7 @@ These policies provide guidance on how to accomplish security objectives for spe
 | Included policy | Rationale | 
 |------|-------------|
 |[Deny Tagging Roles and users with EKS Pod Identities Tags](Amazon-EKS/ProtectPodIdentitiesTagsOnRolesAndUsers.json)| Help ensure that no one can tag IAM users and roles with the tags specific to EKS Pod Identities. This is useful in partnership with an RCP to help ensure that only AWS service principals can set these as session tags, and there is an example of this on our [Resource Control Policy example repo](https://github.com/aws-samples/resource-control-policy-examples/tree/main/Service-specific-controls) |
+|[Deny Grant on AWS managed EKS key](Amazon-EKS/DenyGrantOnAWSManagedEKSKey.json)| Help ensure that no one can create an EKS cluster with non Customer Managed Keys [non KMS CMKs]. As you can only scope CMK per ARN and not metadata, you need to pivot to block creating grant on AWS managed keys and there is an example of this on our [Resource Control Policy example repo](https://github.com/aws-samples/resource-control-policy-examples/tree/main/Service-specific-controls) |
 
 **AWS IAM Roles Anywhere**
 

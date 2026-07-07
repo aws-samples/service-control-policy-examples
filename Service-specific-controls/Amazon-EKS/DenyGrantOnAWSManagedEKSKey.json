@@ -1,0 +1,14 @@
+{
+  "Sid": "DenyGrantOnAWSManagedEKSKey",
+  "Effect": "Deny",
+  "Action": "kms:CreateGrant",
+  "Resource": "*",
+  "Condition": {
+    "StringEquals": {
+      "kms:ViaService": "eks.REGION.amazonaws.com"
+    },
+    "ForAnyValue:StringLike": {
+      "kms:ResourceAliases": "alias/aws/eks"
+    }
+  }
+}
