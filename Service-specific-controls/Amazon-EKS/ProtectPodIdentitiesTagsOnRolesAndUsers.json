@@ -10,15 +10,78 @@
       ],
       "Resource": "*",
       "Condition": {
-        "ForAnyValue:StringEquals": {
-          "aws:TagKeys": [
-            "eks-cluster-arn",
-            "eks-cluster-name",
-            "kubernetes-namespace",
-            "kubernetes-service-account",
-            "kubernetes-pod-name",
-            "kubernetes-pod-uid"
-          ]
+        "Null": {
+          "aws:RequestTag/eks-cluster-arn": "false"
+        }
+      }
+    },
+    {
+      "Sid": "PreventTaggingOfUsersAndRolesWithEKSSpecificTags2",
+      "Effect": "Deny",
+      "Action": [
+        "iam:TagRole",
+        "iam:TagUser"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/eks-cluster-name": "false"
+        }
+      }
+    },
+    {
+      "Sid": "PreventTaggingOfUsersAndRolesWithEKSSpecificTags3",
+      "Effect": "Deny",
+      "Action": [
+        "iam:TagRole",
+        "iam:TagUser"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/kubernetes-namespace": "false"
+        }
+      }
+    },
+    {
+      "Sid": "PreventTaggingOfUsersAndRolesWithEKSSpecificTags4",
+      "Effect": "Deny",
+      "Action": [
+        "iam:TagRole",
+        "iam:TagUser"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/kubernetes-service-account": "false"
+        }
+      }
+    },
+    {
+      "Sid": "PreventTaggingOfUsersAndRolesWithEKSSpecificTags5",
+      "Effect": "Deny",
+      "Action": [
+        "iam:TagRole",
+        "iam:TagUser"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/kubernetes-pod-name": "false"
+        }
+      }
+    },
+    {
+      "Sid": "PreventTaggingOfUsersAndRolesWithEKSSpecificTags6",
+      "Effect": "Deny",
+      "Action": [
+        "iam:TagRole",
+        "iam:TagUser"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "Null": {
+          "aws:RequestTag/kubernetes-pod-uid": "false"
         }
       }
     }
