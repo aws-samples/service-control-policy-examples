@@ -10,11 +10,23 @@
       ],
       "Resource": "*",
       "Condition": {
-        "ForAnyValue:StringLike": {
+        "ForAnyValue:StringEqualsIgnoreCase": {
           "aws:TagKeys": [
-            "x509Issuer*",
-            "x509Subject*",
-            "x509SAN*"
+            "x509Subject/OU",
+            "x509Subject/CN",
+            "x509Subject/O",
+            "x509Subject/C",
+            "x509Subject/ST",
+            "x509Subject/L",
+            "x509Issuer/C",
+            "x509Issuer/O",
+            "x509Issuer/OU",
+            "x509Issuer/ST",
+            "x509Issuer/L",
+            "x509Issuer/CN",
+            "x509SAN/DNS",
+            "x509SAN/URI",
+            "x509SAN/Name/CN"
           ]
         }
       }

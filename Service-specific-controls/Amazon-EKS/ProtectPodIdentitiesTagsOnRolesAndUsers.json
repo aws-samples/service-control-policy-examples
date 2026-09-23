@@ -10,7 +10,7 @@
       ],
       "Resource": "*",
       "Condition": {
-        "ForAnyValue:StringEquals": {
+        "ForAnyValue:StringEqualsIgnoreCase": {
           "aws:TagKeys": [
             "eks-cluster-arn",
             "eks-cluster-name",
